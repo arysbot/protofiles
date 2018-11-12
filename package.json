@@ -1,0 +1,19 @@
+{
+  "name": "protofiles",
+  "version": "1.0.0",
+  "description": "all the protofiles needed for the grpc communications of arys",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arysbot/protofiles.git"
+  },
+  "author": "torsina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arysbot/protofiles/issues"
+  },
+  "homepage": "https://github.com/arysbot/protofiles#readme"
+}

@@ -1,5 +1,16 @@
 syntax = "proto2";
 
 service ShardOrchestrator {
+    rpc Identify(IdentifyRequest) returns (IdentifyResponse);
+}
 
+message IdentifyRequest {
+    required string uuid = 1;
+}
+
+message IdentifyResponse {
+    required string uuid = 1;
+    required uint32 totalShard = 2;
+    required uint32 startShard = 3;
+    required uint32 endShard = 4;
 }

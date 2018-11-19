@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+service Logger {
+    rpc Log(LogRequest) returns (LogResponse);
+}
+
+message LogRequest {
+    required string uuid = 1;
+    required string level = 2;
+    required string service = 3;
+    required string request = 4;
+    required string code = 5;
+    optional string metadata = 6; // json
+}
+
+message LogResponse {
+
+}

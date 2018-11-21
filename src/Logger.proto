@@ -6,11 +6,10 @@ service Logger {
 
 message LogRequest {
     required string uuid = 1;
-    required string level = 2;
-    required string service = 3;
-    required string request = 4;
-    required string code = 5;
-    optional string metadata = 6; // json
+    required string service = 2;
+    required string request = 3;
+    required string code = 4;
+    optional string metadata = 5; // json
 }
 
 message LogResponse {

@@ -2,6 +2,7 @@ syntax = "proto2";
 
 service ShardOrchestrator {
     rpc Identify(IdentifyRequest) returns (IdentifyResponse);
+    rpc UpdateGuildAmount(UpdateGuildAmountRequest) returns (UpdateGuildAmountResponse);
 }
 
 message IdentifyRequest {
@@ -12,6 +13,15 @@ message IdentifyResponse {
     required uint32 totalShard = 1;
     repeated uint32 shards = 2;
     required string errorCode = 3;
-    required uint32 lastUserRefresh = 4;
+    required uint64 lastGuildRefresh = 4;
     optional string errorLog = 5;
+}
+
+message UpdateGuildAmountRequest {
+    required string uuid = 1;
+    required uint32 guildAmoount = 2;
+}
+
+message UpdateGuildAmountResponse {
+
 }

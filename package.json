@@ -1,6 +1,6 @@
 {
   "name": "@arys/protofiles",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "all the protofiles needed for the grpc communications of arys",
   "main": "index.js",
   "scripts": {

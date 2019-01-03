@@ -9,11 +9,9 @@ message IdentifyRequest {
 }
 
 message IdentifyResponse {
-    required string uuid = 1;
-    required uint32 totalShard = 2;
-    required uint32 startShard = 3;
-    required uint32 endShard = 4;
-    required string errorCode = 5;
-    required uint32 lastUserRefresh = 6;
-    optional string errorLog = 7;
+    required uint32 totalShard = 1;
+    repeated uint32 shards = 2;
+    required string errorCode = 3;
+    required uint32 lastUserRefresh = 4;
+    optional string errorLog = 5;
 }

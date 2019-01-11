@@ -18,7 +18,7 @@ message IdentifyResponse {
 }
 
 message UpdateGuildAmountRequest {
-    required string uuid = 1;
+    required uint32 shard = 1;
     required uint32 guildAmoount = 2;
 }
 

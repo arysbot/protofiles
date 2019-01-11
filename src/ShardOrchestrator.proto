@@ -23,5 +23,6 @@ message UpdateGuildAmountRequest {
 }
 
 message UpdateGuildAmountResponse {
-
+    required string errorCode = 1;
+    optional string errorLog = 2;
 }

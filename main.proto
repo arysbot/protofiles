@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+import public "src/Sharder.proto";
+import public "src/OrchestratorSharder.proto";
+import public "src/MessageHandler.proto";
+import public "src/Logger.proto";
+import public "src/DiscordAPI.proto";
+import public "src/Database.proto";
+import public "src/Commands.proto";
+
+package arys;

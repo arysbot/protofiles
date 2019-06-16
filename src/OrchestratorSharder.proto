@@ -1,20 +1,25 @@
 syntax = "proto2";
 
-service ShardOrchestrator {
-    rpc Identify(IdentifyRequest) returns (IdentifyResponse);
-    rpc UpdateGuildAmount(UpdateGuildAmountRequest) returns (UpdateGuildAmountResponse);
-}
+package arys.orchestratorSharder;
 
 message IdentifyRequest {
     required string uuid = 1;
+    required string hostname = 2;
 }
 
 message IdentifyResponse {
     required uint32 totalShard = 1;
     repeated uint32 shards = 2;
-    required string errorCode = 3;
-    required uint64 lastGuildRefresh = 4;
-    optional string errorLog = 5;
+}
+
+// message sent by the sharder when the server disconnects to inform the orchestrator that some shards are already connected
+message ReconnectionRequest {
+    required uint32 totalShard = 1;
+    repeated uint32 shards = 2;
+}
+
+message ReconnectionResponse {
+
 }
 
 message UpdateGuildAmountRequest {
@@ -25,4 +30,8 @@ message UpdateGuildAmountRequest {
 message UpdateGuildAmountResponse {
     required string errorCode = 1;
     optional string errorLog = 2;
+}
+
+message Ping {
+    required string ping = 1;
 }

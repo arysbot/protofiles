@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package arys.sharder;
+
+message GetGuildCountRequest {
+    required string uuid = 1;
+}
+
+message GetGuildCountResponse {
+    required uint32 guildCount = 1;
+    repeated uint32 shards = 2;
+}
